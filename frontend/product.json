@@ -1,0 +1,73 @@
+// imaegclickarcargi
+
+[
+  {
+    "id": 1,
+    "name": "Cargo Pants Olive Green",
+    "image": "./images/cargo1.png",
+    "price": 1499
+  },
+  {
+    "id": 2,
+    "name": "Black Hoodie",
+   "image": "./images/cargo1.png",
+    "price": 1199
+  },
+  {
+    "id": 3,
+    "name": "Nike White Sneakers",
+    "image": "./images/cargo1.png",
+    "price": 3199
+  },
+  {
+    "id": 4,
+    "name": "Digital Wrist Watch",
+     "image": "./images/cargo1.png",
+    "price": 799
+  },
+  {
+    "id": 5,
+    "name": "Wireless Headphones",
+     "image": "./images/cargo1.png",
+    "price": 1599
+  },
+  {
+    "id": 6,
+    "name": "Classic Sunglasses",
+     "image": "./images/cargo1.png",
+    "price": 699
+  },
+  {
+    "id": 7,
+    "name": "Smartphone Stand",
+   "image": "./images/cargo1.png",
+    "price": 299
+  },
+  {
+    "id": 8,
+    "name": "Leather Wallet",
+    "image": "./images/cargo1.png",
+    "price": 499
+  },
+  {
+    "id": 9,
+    "name": "Water Bottle - Steel",
+    "image": "./images/cargo1.png",
+    "price": 349
+  },
+  {
+    "id": 10,
+    "name": "Travel Backpack",
+  "image": "./images/cargo1.png",
+    "price": 1899
+  },
+
+
+   {
+    "id": 11,
+    "name": "Cargo11",
+    "image": "./images/cargo3.png",
+    "price": 1499
+  }
+
+]

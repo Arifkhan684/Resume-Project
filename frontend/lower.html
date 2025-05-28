@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        *::selection {
+            color: #fff;
+            background-color: #000;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: "General Sans";
+            color: #000;
+
+        }
+
+
+        .main {
+            width: 100%;
+        }
+
+        .logo {
+            padding: 2% 40px;
+
+        }
+
+        .logo h1 {
+            font-size: 50px;
+            font-weight: 600;
+
+        }
+
+        .papa {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .nav {
+            column-gap: 80px;
+            font-weight: 500;
+            font-size: 20px;
+
+        }
+
+        .icon i {
+            font-size: 20px;
+            margin: 0 5px;
+        }
+
+        .click-img img {
+            width: 25%;
+               margin-top: 80px;
+
+            position: relative;
+            left: 100px;
+
+
+        }
+
+        .click-img {
+            display: flex;
+            column-gap: 20%;
+
+
+        }
+
+        .click-head {
+            gap: 10px;
+            position: relative;
+            top: 100px;
+        }
+
+        .btn {
+            margin-top: 30px;
+        }
+
+        .btn button {
+            color: #fff;
+            border: 1px solid #000;
+            padding: 5px 7rem;
+            background-color: #000;
+            font-size: 25px;
+            border-radius: 3px;
+
+        }
+
+        .click-size span {
+            border: 2px solid #868282;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 5px;
+
+        }
+
+        .click-size {
+            margin-top: 20px;
+        }
+
+        .click-size span:hover {
+            border: 2px solid red;
+        }
+
+        .click-color img {
+            border: 2px solid #868282;
+            width: 8%;
+            margin: 0;
+        }
+
+        .click-color img:hover {
+            border: 2px solid red;
+        }
+
+        .click-color p {
+            font-size: 20px;
+        }
+
+        .click-head p {
+            font-size: 20px;
+        }
+
+        .price {
+            font-weight: 800;
+        }
+
+        #third-head {
+            text-align: center;
+        }
+
+        #third-head h1 {
+            /* text-align: justify; */
+            position: relative;
+            top: 100px;
+            font-size: 3rem;
+            padding: 20px;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: blue; */
+        }
+
+        .img {
+            width: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 51% 49% 50% 50% / 34% 32% 31% 31%;
+            /* border: 1px solid #000; */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        }
+
+        #sharko {
+            color: #fff;
+            border: 1px solid #000;
+            padding: 10px 20px;
+            background-color: #000;
+            font-size: 18px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="main"></div>
+
+
+    <div class="click">
+        <div class="click-img">
+            <img src="./images/Screenshot (243).png" alt="" id="main-img">
+            <div class="click-head">
+                <p>ARCTIC SHIELD JACKET</p>
+                <p class="price">Rs.1,156.00</p>
+                <p>MRP inclusive of all taxes</p>
+                <div class="click-color">
+                    <p>Colour:</p>
+                    <img src="./images/DC1.webp" alt="" id="click-color1">
+                    <img src="./images/DC2.webp" alt="" id="click-color2">
+                    <img src="./images/DC3.jpg" alt="" id="click-color3">
+                    <img src="./images/DC4.webp" alt="" id="click-color4">
+                </div>
+                <p id="size-text">Select :Size</p>
+                <div class="click-size">
+                    <span>S</span>
+                    <span>M</span>
+                    <span>L</span>
+                    <span>XL</span>
+                </div>
+                <div class="btn">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 
+    //list of item -->
+    <div id="third">
+        <div id="third-head">
+            <h1>Cargo</h1>
+            <div class="wrapper">
+                <div class="image">
+                    <img src="./images/Screenshot (244).png" alt="" class="img" data-target="lower1.html">
+                    <div class="content">
+                        <p>Cargo Pants</p>
+
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="./images/Screenshot (244).png" alt="" class="img" id="img2" data-target="lower2.html">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="./images/Screenshot (244).png" alt="" class="img" id="img2" data-target="lower3.html">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="./images/Screenshot (244).png" alt="" class="img" id="img3" data-target="lower4.html">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="third">
+        <div id="third-head">
+
+            <div class="wrapper">
+                <div class="image">
+                    <img src="./images/Screenshot (244).png" alt="" class="img" data-target="lower5.html">
+                    <div class="content">
+                        <p>Cargo Pants</p>
+
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="./images/Screenshot (244).png" alt="" class="img" id="img2" data-target="lower6.html">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="./images/Screenshot (244).png" alt="" class="img" id="img2" data-target="lower7.html">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="./images/Screenshot (244).png" alt="" class="img" id="img3" data-target="lower8.html">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('main').innerHTML = data;
+
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(data, 'text/html');
+                const scripts = doc.querySelectorAll('script');
+                scripts.forEach(script => {
+                    const newScript = document.createElement('script');
+                    newScript.text = script.textContent;
+                    document.body.appendChild(newScript);
+                });
+
+                if (typeof window.initSearch === 'function') {
+                    console.log("initSearch mil gaya, call kar rahe hain");
+                    window.initSearch();
+                } else {
+                    console.error("initSearch function nahi mila!");
+                }
+            })
+            .catch(err => console.error("Header fetch karne mein error:", err));
+        //end
+        const mainImg = document.querySelector("#main-img");
+        const thumbnails = document.querySelectorAll(".click-color img");
+
+        thumbnails.forEach((thumb) => {
+            thumb.addEventListener("click", () => {
+                mainImg.src = thumb.src;
+            });
+        });
+
+
+        const sizeText = document.getElementById("size-text");
+        const clickSize = document.querySelectorAll(".click-size span")
+
+        clickSize.forEach((size) => {
+
+            size.addEventListener("click", () => {
+                sizeText.textContent = "Select : " + size.textContent
+            })
+        })
+
+        const clickableImage = document.querySelectorAll('img[data-target]');
+
+        clickableImage.forEach((img) => {
+            img.addEventListener('click', () => {
+                const page = img.getAttribute('data-target');
+
+                window.location.href = `./lowersection/${page}`
+            })
+        })
+    </script>
+</body>
+
+</html>

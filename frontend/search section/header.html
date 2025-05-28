@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration: none;
+    }
+
+    *::selection {
+      color: #fff;
+      background-color: #000;
+    }
+
+    body {
+      background-color: #fff;
+      font-family: "General Sans", sans-serif;
+      color: #000;
+    }
+
+    .main {
+      /* position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%; */
+      /* background-color: #fff; */
+    }
+
+    .logo {
+      padding: 2% 40px;
+    }
+
+    .logo h1 {
+      font-size: 50px;
+      font-weight: 600;
+    }
+
+    .papa {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav {
+      column-gap: 80px;
+      font-weight: 500;
+      font-size: 20px;
+      display: flex;
+    }
+
+    .nav a {
+      color: #000;
+    }
+
+    .icon i {
+      font-size: 20px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    /* Search Panel Styles */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      z-index: 1000;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    .serach-box {
+      position: fixed;
+      top: 0;
+      right: -350px;
+      width: 370px;
+      height: 100vh;
+      background: #fff;
+      box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease;
+      padding: 20px;
+      z-index: 1001;
+    }
+
+    .serach-box.active {
+      right: 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      margin-top: 80px;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    .row input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 20px;
+      padding: 8px;
+      border-bottom: 1px solid #000;
+    }
+
+    .row button {
+      background: transparent;
+      border: none;
+      outline: none;
+    }
+
+    .row button i {
+      font-size: 20px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .result-box ul {
+      margin-top: 20px;
+      padding-top: 10px;
+    }
+
+    .result-box ul li {
+      padding: 10px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .result-box ul li:hover {
+      background-color: #f0f0f0;
+      border-radius: 4px;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+    }
+
+    /* for laptop */
+    @media screen and (min-width: 1000px) and (max-width: 1230px) {
+
+      .nav {
+        column-gap: 50px;
+        font-weight: 500;
+        font-size: 18px;
+        display: flex;
+      }
+
+      .logo h1 {
+        font-size: 40px;
+        font-weight: 600;
+      }
+
+    }
+
+    @media screen and(min-width:800px) and (max-width: 995px) {}
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="logo papa">
+      <h1>IndoBerlien</h1>
+      <ul class="papa nav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <div class="icon">
+        <i class="ri-search-line" id="searchBtn"></i>
+        <div id="cart-icon" style="position: relative; cursor: pointer;">
+          <a href="./checkout.html" style="color: #000;"><i class="ri-shopping-bag-line"></i></a>
+          <span id="cart-count" style="
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+            display: none;
+          ">0</span>
+        </div>
+
+
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Search Box -->
+  <div class="serach-box" id="searchPanel">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <div class="row">
+      <input type="text" id="input-box" placeholder="Search..." autocomplete="off" />
+      <i class="ri-search-line"></i>
+    </div>
+    <div class="result-box" id="resultBox"></div>
+  </div>
+
+  <script>
+    const availableKeywords = [
+      "T-shirts",
+      "Cargo pants",
+      "Shirts",
+      "Pants",
+      "Lower",
+      "Cargo Lower"
+    ];
+
+    const searchBtn = document.getElementById("searchBtn");
+    const searchPanel = document.getElementById("searchPanel");
+    const closeBtn = document.getElementById("closeBtn");
+    const overlay = document.getElementById("overlay");
+    const inputBox = document.getElementById("input-box");
+    const resultBox = document.getElementById("resultBox");
+
+    // Open search
+    searchBtn.onclick = () => {
+      searchPanel.classList.add("active");
+      overlay.classList.add("active");
+      inputBox.focus();
+    };
+
+    // Close search
+    function closeSearch() {
+      searchPanel.classList.remove("active");
+      overlay.classList.remove("active");
+      inputBox.value = "";
+      resultBox.innerHTML = "";
+    }
+
+    closeBtn.onclick = closeSearch;
+    overlay.onclick = closeSearch;
+
+    inputBox.onkeyup = function () {
+      let result = [];
+      let input = inputBox.value;
+      if (input.length) {
+        result = availableKeywords.filter((keywords) =>
+          keywords.toLowerCase().includes(input.toLowerCase())
+        );
+      }
+      display(result);
+      if (!result.length) {
+        resultBox.innerHTML = '';
+      }
+    };
+
+    function display(result) {
+      const content = result.map((list) => {
+        return "<li onclick=selectInput(this)>" + list + "</li>";
+      }).join("");
+      resultBox.innerHTML = "<ul>" + content + "</ul>";
+    }
+
+    function selectInput(list) {
+      inputBox.value = list.innerHTML;
+      resultBox.innerHTML = '';
+    }
+
+
+
+
+    function updateCartDisplay() {
+      const count = parseInt(localStorage.getItem('cartCount') || '0');
+      const cartCountElem = document.getElementById('cart-count');
+      if (cartCountElem) {
+        cartCountElem.textContent = count;
+        cartCountElem.style.display = count > 0 ? 'inline-block' : 'none';
+      }
+    }
+
+    function addToCart() {
+      let count = parseInt(localStorage.getItem('cartCount') || '0');
+      count++;
+      localStorage.setItem('cartCount', count);
+      updateCartDisplay();
+    }
+
+
+
+
+
+
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', addToCart);
+    });
+
+    updateCartDisplay();
+
+
+
+
+    function addToCart(event) {
+      let count = parseInt(localStorage.getItem('cartCount') || '0');
+      count++;
+      localStorage.setItem('cartCount', count);
+
+      // Get product details from the button's parent element
+      const productElement = event.target.closest('.image');
+      const productName = productElement.querySelector('.content p').textContent;
+      const productPrice = 50; // Default price, update if you have actual prices
+      const productImage = productElement.querySelector('img').src; // Get image URL
+
+      // Get existing cart items or initialize empty array
+      let cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+
+      // Add new item to cart
+      cartItems.push({
+        name: productName,
+        price: productPrice,
+        quantity: 1,
+        image: productImage
+      });
+
+      // Save updated cart items to localStorage
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCartDisplay();
+    }
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

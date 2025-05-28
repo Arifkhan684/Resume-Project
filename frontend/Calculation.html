@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        *::selection {
+            color: #fff;
+            background-color: #000;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: "General Sans", sans-serif;
+            color: #000;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .logo {
+            padding: 2% 40px;
+        }
+
+        .logo h1 {
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        .papa {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav {
+            column-gap: 80px;
+            font-weight: 500;
+            font-size: 20px;
+            display: flex;
+        }
+
+        .nav a {
+            color: #000;
+        }
+
+        .icon i {
+            font-size: 20px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="logo papa">
+            <h1>IndoBerlien</h1>
+            <ul class="papa nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="icon">
+                <i class="ri-shopping-bag-line"></i>
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </div>
+    <script>
+        const icons = document.querySelector(".icon");
+        icons.addEventListener("click",()=>{
+            
+        })
+    </script>
+</body>
+
+</html>
