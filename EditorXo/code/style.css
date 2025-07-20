@@ -1,0 +1,268 @@
+@font-face {
+    font-family: "General Sans";
+    src: url(../fonts/GeneralSans-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "General Sans";
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.code-editor-container {
+    width: 100%;
+    height: 70%;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.code-editor {
+    width: 450px;
+    height: 450px;
+    background-color: #111;
+    box-shadow: 2px 2px 10px black;
+    border: 2px solid rgba(255, 255, 255, 0.105);
+    border-radius: 20px;
+    overflow: auto;
+    position: relative;
+}
+
+.head-editor {
+    width: 100%;
+    height: 60px;
+    box-shadow: 2px 2px 10px black;
+    background-color: #111;
+    border-radius: 0px 0px 40px 40px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-hand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.left-hand span {
+    color: white;
+
+}
+
+.right-hand i {
+    display: inline-block;
+    color: white;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.right-hand i:hover {
+    transform: scale(1.2);
+    color: rgb(139, 139, 139);
+}
+
+.code-editor textarea {
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: #111;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    outline: none;
+    padding: 20px;
+    resize: none;
+    font-size: 20px;
+}
+
+.output-container {
+    width: 100%;
+    height: 30%;
+    box-shadow: 2px -4px 10px rgb(139, 139, 139);
+    font-size: 20px;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    transition: all 0.5s;
+
+}
+
+.output-hand {
+
+    width: 100%;
+    height: 60px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.output-hand i:hover {
+    transform: scale(1.2);
+    color: rgb(139, 139, 139);
+    cursor: pointer;
+}
+
+#output {
+    width: 100%;
+    height: calc(100% - 60px);
+    overflow: auto;
+    background-color: #fff;
+}
+
+.output-full-active {
+    height: 100%;
+}
+
+#full {
+    transition: all 0.5s;
+}
+
+.html-input::selection {
+    background-color: rgb(255, 119, 0);
+}
+
+.js-input::selection {
+    background-color: rgb(252, 206, 0);
+    color: black;
+}
+
+.rotate-on-click {
+    animation: rotateIcon 0.2s linear;
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(100deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .code-editor-container {
+        width: 100%;
+        height: auto;
+        background-color: #111;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .code-editor {
+        width: 90%;
+        height: 300px;
+        background-color: #111;
+        box-shadow: 2px 2px 10px black;
+        border: 2px solid rgba(255, 255, 255, 0.105);
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .head-editor {
+        width: 100%;
+        height: 50px;
+        box-shadow: 2px 2px 10px black;
+        background-color: #111;
+        border-radius: 0px 0px 40px 40px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .code-editor textarea {
+        width: 100%;
+        height: calc(100% - 50px);
+        background-color: #111;
+        border: none;
+        color: white;
+        outline: none;
+        padding: 10px;
+        resize: none;
+        font-size: 16px;
+        line-height: 1.4;
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .code-editor-container {
+        width: 100%;
+        height: auto;
+        background-color: #111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 40px 20px;
+        overflow-y: auto;
+    }
+
+    .code-editor {
+        width: 90%;
+        height: 350px;
+        background-color: #111;
+        box-shadow: 2px 2px 10px black;
+        border: 2px solid rgba(255, 255, 255, 0.105);
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .head-editor {
+        width: 100%;
+        height: 50px;
+        box-shadow: 2px 2px 10px black;
+        background-color: #111;
+        border-radius: 0px 0px 40px 40px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .code-editor textarea {
+        width: 100%;
+        height: calc(100% - 50px);
+        background-color: #111;
+        border: none;
+        color: white;
+        outline: none;
+        padding: 15px;
+        resize: none;
+        font-size: 16px;
+        line-height: 1.4;
+        overflow-y: auto;
+    }
+
+}

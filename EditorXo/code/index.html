@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditorXo</title>
+    <link rel="shortcut icon" href="../image/favicon-32x32.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- input code for html,css,js -->
+    <div class="code-editor-container">
+
+        <div class="code-editor html-editor">
+            <!-- for icons image -->
+            <div class="head-editor">
+                <div class="left-hand">
+                    <img src="../image/html.png" alt="" width="25px">
+                    <span>HTML</span>
+                </div>
+                <div class="right-hand">
+                    <i class="ri-refresh-line html-reload"></i>
+                    <i class="ri-file-copy-line copy copy1" ></i>
+                </div>
+            </div>
+            <!-- create textarea to type something -->
+            <textarea class="html-input" spellcheck="false"></textarea>
+        </div>
+
+        <div class="code-editor css-editor">
+            <!-- for icons image -->
+            <div class="head-editor">
+                <div class="left-hand">
+                    <img src="../image/css.png" alt="" width="30px">
+                    <span>CSS</span>
+                </div>
+                <div class="right-hand">
+                    <i class="ri-refresh-line css-reload"></i>
+                    <i class="ri-file-copy-line copy copy2" ></i>
+                </div>
+            </div>
+            <!-- create textarea to type something -->
+            <textarea class="css-input" spellcheck="false"></textarea>
+        </div>
+
+        <div class="code-editor js-editor">
+            <!-- for icons image -->
+            <div class="head-editor">
+                <div class="left-hand">
+                    <img src="../image/js.png" alt="" width="30px">
+                    <span>Javascript</span>
+                </div>
+                <div class="right-hand">
+                    <i class="ri-refresh-line js-reload"></i>
+                    <i class="ri-file-copy-line copy copy3" ></i>
+                </div>
+            </div> 
+            <!-- create textarea to type something -->
+            <textarea class="js-input" spellcheck="false"></textarea>
+        </div>
+    </div>
+    <!-- output code for html,css,js -->
+    <div class="output-container">
+        <div class="output-hand">
+            <span>OUTPUT</span>
+            <i class="ri-save-line" id="save"></i>
+            <i class="ri-arrow-up-s-line" id="full"></i>
+        </div>
+        <iframe id="output"></iframe>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditorXo</title>
+     <link rel="shortcut icon" href="../image/favicon-32x32.png" type="image/x-icon">
+    <style>
+        @font-face {
+            font-family: "General Sans";
+            src: url(../fonts/GeneralSans-Regular.otf);
+        }
+
+        @font-face {
+            font-family: "Aeonik Medium";
+            src: url(../fonts/677fccd22cc35f4de87255b2_Aeonik-medium.ttf);
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .container {
+
+            width: 100%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 1rem;
+
+            padding: 2rem;
+        }
+
+        h2 {
+            font-size:3vw;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1a202c;
+            font-family: "Aeonik Medium";
+
+        }
+
+        h3 {
+            font-family: "Aeonik Medium";
+            font-size: 2vw;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: #4a5568;
+            line-height: 1.6;
+            font-family: "General Sans";
+            max-width: 50%;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+            font-family: "General Sans";
+        }
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+            color: #4a5568;
+        }
+
+        li strong {
+            color: #2d3748;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+            width: 1.5em;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+                margin: 10px;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+                margin-bottom: 1rem;
+            }
+
+            p,
+            li {
+                font-size: 1rem;
+            }
+
+            .icon {
+                font-size: 1.25rem;
+                margin-right: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>About EditorXo</h2>
+
+        <p>
+            This  editorXo is your ultimate playground for learning and practicing web development. Whether you are a
+            beginner or an experienced developer, our platform offers a seamless experience to write code, learn, and
+            preview your web projects in real-time.
+        </p>
+
+        <p>
+            Our goal is to provide an environment where you can experiment with HTML, CSS, and JavaScript and see
+            immediate results. This helps you grasp web development concepts more effectively.
+        </p>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li>
+                <span class="icon">✍️</span>
+                <strong>Real-time Coding:</strong> Write your code and instantly see how it looks in the browser.
+            </li>
+            <li>
+                <span class="icon">📱</span>
+                <strong>Responsive Design:</strong> Ensure your projects look great on various devices and screen sizes.
+            </li>
+            <li>
+                <span class="icon">💡</span>
+                <strong>Easy to Learn:</strong> Get started with the basics of web development with a simple and
+                intuitive interface.
+            </li>
+        </ul>
+
+        <p>
+            We are continuously striving to improve this editor by adding new features and support for more languages to
+            make it a one-stop solution for web developers.
+        </p>
+    </div>
+</body>
+
+</html>
