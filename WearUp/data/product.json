@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "name": "shirts3",
+    "price": 799,
+    "image": [
+      "../model/Screenshot (241).png",
+      "../model/Screenshot (242).png"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Black Cargo",
+    "price": 899,
+    "image": [
+      "../model/DC1.webp",
+      "../model/DC2.webp",
+      "../model/DC3.jpg",
+      "../model/DC4.webp",
+      "../model/DSC02972-Edit.webp",
+      "../model/DSC03004-Edit.webp"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "lower4",
+    "price": 699,
+    "image": [
+      "../model/Screenshot (243).png",
+      "../model/Screenshot (244).png"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "black pant",
+    "price": 899,
+    "image": [
+      "../model/pants.png"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "fullseleves",
+    "price": 999,
+    "image": [
+      "../model/Screenshot (245).png",
+      "../model/Screenshot (246).png"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "white pant",
+    "price": 899,
+    "image": [
+      "../model/PAL03209-Edit.webp",
+      "../model/PAL03269-Edit.webp"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "grey Cargo",
+    "price": 899,
+    "image": [
+      "../model/cargo1.png",
+      "../model/cargo2.png",
+      "../model/cargo3.png"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "t-shirt",
+    "price": 899,
+    "image": [
+      "../model/Screenshot (239).png",
+      "../model/Screenshot (240).png"
+    ]
+  }
+]

@@ -1,0 +1,3 @@
+---->Developing a responsive clothing website that will be completed soon.
+
+---->It includes features like smooth scrolling (using Lenis.js), search, and add-to-cart, and will look great and work well on all devices.

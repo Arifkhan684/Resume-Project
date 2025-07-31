@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main" id="main"></div>
+
+    <div id="third">
+        <div id="third-head">
+
+            <div class="wrapper">
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img">
+                    <div class="content">
+                        <p>Cargo Pants</p>
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img" id="img2">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img" id="img2">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img" id="img3">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="third">
+        <div id="third-head">
+
+            <div class="wrapper">
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img">
+                    <div class="content">
+                        <p>Cargo Pants</p>
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img" id="img2">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img" id="img2">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img" id="img3">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="third">
+        <div id="third-head">
+
+            <div class="wrapper">
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img">
+                    <div class="content">
+                        <p>Cargo Pants</p>
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img" id="img2">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img" id="img2">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../model/Screenshot (246).png" alt="" class="img" id="img3">
+                    <div class="content">
+                        <p>ARCTIC SHIELD JACKET</p>
+                        <button class="add-to-cart" id="sharko">Add to Cart</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('main').innerHTML = data;
+
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(data, 'text/html');
+                const scripts = doc.querySelectorAll('script');
+                scripts.forEach(script => {
+                    const newScript = document.createElement('script');
+                    newScript.text = script.textContent;
+                    document.body.appendChild(newScript);
+                });
+
+                if (typeof window.initSearch === 'function') {
+                    console.log("initSearch mil gaya, call kar rahe hain");
+                    window.initSearch();
+                } else {
+                    console.error("initSearch function nahi mila!");
+                }
+            })
+            .catch(err => console.error("Header fetch karne mein error:", err));
+    </script>
+</body>
+
+</html>
